@@ -1,3 +1,5 @@
+RUN ONLY WITH https://localhost:4200/, https://127.0.0.1:4200/ won't work.
+
 # TestSML
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
