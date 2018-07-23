@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  margin-top: 20px;
+}
+
+input[type="number"] {
+  width: 50%;
+  margin-left: 10px;
+}
+
+.main {
+  margin: 5% 30%;
+  border-style: solid;
+  padding: 10px 5px;
+}
+
+.errors {
+  color: red;
+}
+
+.avatar {
+  width: 80%;
+  height: auto;
+}
+
+.current-user {
+  background-color: dodgerblue;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none !important;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607d8b;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+nav a.active {
+  color: #039be5;
+}

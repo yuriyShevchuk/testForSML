@@ -1,0 +1,22 @@
+<div class="container-fluid main text-center">
+  <input type="text" (keyup)="filterAnswers($event.target.value)">
+  <div *ngFor="let answer of answers"
+       (click)="user['id'] == answer['id'] ? onOwnerClick(answer['name']) : undefined"
+       [class.current-user]="user['id'] == answer['id']"
+       class="col-xs-12">
+
+    <div class="col-md-2">
+      <img class="avatar" [src]="answer['picture']" alt="no img">
+    </div>
+    <div class="col-md-6">
+      <h4>{{ answer.name }}</h4>
+    </div>
+    <div class="col-md-2">
+      <img class="avatar" [src]="answer['choice'] == 1 ? yesImg : noImg">
+    </div>
+    <div class="col-md-2">
+      <h4 *ngIf="answer['choice'] == 1 && answer['with'] != 0">{{ answer['with'] }}</h4>
+    </div>
+
+  </div>
+</div>

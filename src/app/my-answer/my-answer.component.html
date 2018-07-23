@@ -1,0 +1,24 @@
+<div class="container-fluid main">
+  <form action="#">
+    <div class="form-group">
+      <label for="name">Me</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="myName">
+    </div>
+    <div class="form-group form-inline">
+      <label for="quantity" class="col-2">With me</label>
+      <input type="number" class="form-control col-1"
+             name="quan" id="quantity" placeholder="0" [(ngModel)]="withMe" >
+    </div>
+    <div class="form-group">
+      <select class="form-control" name="choice" [(ngModel)]="myChoice">
+        <option *ngFor="let ch of choices" [value]="ch.value">{{ ch.name }}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default" (click)="onSubmit()">Submit</button>
+    <div *ngIf="errors.length > 0" class="errors">
+      <ul>
+        <li *ngFor="let error of errors">{{ error }}</li>
+      </ul>
+    </div>
+  </form>
+</div>
